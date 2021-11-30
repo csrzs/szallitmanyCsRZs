@@ -37,7 +37,7 @@ public abstract class KozlekedesiEszkoz {
 
   @Override
   public final String toString() {
-    return "Típus: VONAT" + "\n"
+    return "Típus: " + getTipus() + "\n"
             + "Nyilvántartási szám: [" + nyilvantartasiSzam + "]" + "\n"
             + "Sebesség: " + sebesseg + " km/h";
   }
