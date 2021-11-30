@@ -19,7 +19,7 @@ public abstract class Kontener implements VanTomege {
 
   // GETTEREK, SETTEREK ---------------------------------------------------------------------------
 
-  public int getArukTomege() {
+  public double getArukTomege() {
     int output = 0;
 
     for (Aru elem : kontener) {
@@ -40,6 +40,10 @@ public abstract class Kontener implements VanTomege {
     kontener[elsoSzabadHelyIndexe()] = input;
   }
 
+  public double getSzabadKapacitas() {
+    return getKapacitas() - getArukTomege();
+  }
+
   // OVERRIDEOK -----------------------------------------------------------------------------------
 
   @Override
@@ -47,19 +51,19 @@ public abstract class Kontener implements VanTomege {
     return getArukTomege();
   }
 
-  // EGYÉB METÓDUSOK ------------------------------------------------------------------------------
-
-
   @Override
   public String toString() {
     return adatlap();
   }
 
+  // EGYÉB METÓDUSOK ------------------------------------------------------------------------------
+
   public final String adatlap() {
     return "Áruk listája:" + "\n"
             + aruLista()
-            + "Konténer tömege: " + getTomeg() + "\n"
-            + "Konténer kapacitása: " + getKapacitas() + "\n";
+            + "Tárolt áruk tömege: " + getTomeg() + "\n"
+            + "Konténer max. kapacitása: " + getKapacitas() + "\n"
+            + "Konténer szabad kapacitása: " + getSzabadKapacitas() + "\n";
   }
 
   public final String aruLista() {

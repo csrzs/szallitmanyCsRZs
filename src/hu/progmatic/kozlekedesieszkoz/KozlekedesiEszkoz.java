@@ -38,6 +38,7 @@ public abstract class KozlekedesiEszkoz {
   @Override
   public final String toString() {
     return "Típus: VONAT" + "\n"
-            + "Nyilvántartási szám: [" + nyilvantartasiSzam + "]";
+            + "Nyilvántartási szám: [" + nyilvantartasiSzam + "]" + "\n"
+            + "Sebesség: " + sebesseg + " km/h";
   }
 }

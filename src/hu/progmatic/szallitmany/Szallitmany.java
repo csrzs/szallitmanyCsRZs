@@ -51,13 +51,21 @@ public class Szallitmany implements VanTomege {
 
   public String adatlap() {
     return "========== SZÁLLÍTMÁNY ADATLAPJA ==========" + "\n"
-            + "Közlekedési eszköz adatlapja:--------------" + "\n"
+            + "===========================================" + "\n"
+            + "\n"
+            + "------ KÖZLEKEDÉSI ESZKÖZ ADATLAPJA -------" + "\n"
+            + "\n"
             + szallitmanyKozlekedesiEszkoz.toString() + "\n"
+            + "\n"
             + "-------------------------------------------" + "\n"
             + "\n"
-            + "Konténer adatlapja:------------------------" + "\n"
+            + "----------- KONTÉNER ADATLAPJA ------------" + "\n"
+            + "\n"
             + szallitmanyKontener.adatlap()
+            + "\n"
             + "-------------------------------------------" + "\n"
+            + "\n"
+            + "===========================================" + "\n"
             + "===========================================";
   }
 
