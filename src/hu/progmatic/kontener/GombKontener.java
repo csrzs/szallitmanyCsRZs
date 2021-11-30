@@ -14,6 +14,6 @@ public final class GombKontener extends Kontener {
 
   @Override
   public double getKapacitas() {
-    return (4 / 3) * sugar * Math.PI;
+    return (4.0 / 3.0) * sugar * Math.PI;
   }
 }

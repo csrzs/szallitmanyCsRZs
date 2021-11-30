@@ -2,7 +2,6 @@ package hu.progmatic;
 
 import hu.progmatic.aru.Aru;
 import hu.progmatic.aru.Halmazallapot;
-import hu.progmatic.kontener.Kontener;
 import hu.progmatic.kontener.TeglatestKontener;
 import hu.progmatic.kozlekedesieszkoz.Vonat;
 import hu.progmatic.szallitmany.Szallitmany;

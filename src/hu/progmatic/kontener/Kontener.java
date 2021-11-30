@@ -6,9 +6,8 @@ import hu.progmatic.tomeg.VanTomege;
 import java.util.Arrays;
 
 public abstract class Kontener implements VanTomege {
-  private int arufelek;
+  private final int arufelek;
   private final Aru[] kontener;
-  private int kontenerTomeg;
 
   // KONSTRUKTOROK --------------------------------------------------------------------------------
 
@@ -26,7 +25,6 @@ public abstract class Kontener implements VanTomege {
       if (elem != null) {
         output += elem.getTomeg();
       }
-      continue;
     }
     return output;
   }
@@ -74,7 +72,6 @@ public abstract class Kontener implements VanTomege {
         output += elem.toString();
       } else {
         output += "null" + "\n";
-        continue;
       }
     }
     return output;
@@ -96,7 +93,6 @@ public abstract class Kontener implements VanTomege {
         return output;
       } else {
         output++;
-        continue;
       }
     }
     return output;
@@ -106,8 +102,6 @@ public abstract class Kontener implements VanTomege {
     for (Aru elem : kontener) {
       if (elem.equals(input)) {
         return true;
-      } else {
-        continue;
       }
     }
     return false;
