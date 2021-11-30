@@ -37,7 +37,6 @@ public abstract class Kontener implements VanTomege {
     if (nincsSzabadHely() || nincsSzabadKapacitas(input.getTomeg())) {
       throw new RuntimeException("Nincs szabad hely, vagy nincs szabad kapacitás!");
     }
-    if ()
     kontener[elsoSzabadHelyIndexe()] = input;
   }
 
