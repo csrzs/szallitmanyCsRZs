@@ -35,7 +35,11 @@ public abstract class Kontener implements VanTomege {
     if (nincsSzabadHely() || nincsSzabadKapacitas(input.getTomeg())) {
       throw new RuntimeException("Nincs szabad hely, vagy nincs szabad kapacitás!");
     }
-    kontener[elsoSzabadHelyIndexe()] = input;
+    if (vanMarAzonosAru(input)) {
+      kontener[azonosAruIndexe(input)].setMennyiseg(kontener[azonosAruIndexe(input)].getMennyiseg() + input.getMennyiseg());
+    } else {
+      kontener[elsoSzabadHelyIndexe()] = input;
+    }
   }
 
   public double getSzabadKapacitas() {
@@ -82,7 +86,7 @@ public abstract class Kontener implements VanTomege {
   }
 
   public boolean nincsSzabadKapacitas(double inputAruTomege) {
-    return getKapacitas() < getArukTomege() + inputAruTomege;
+    return getSzabadKapacitas() < inputAruTomege;
   }
 
   public int elsoSzabadHelyIndexe() {
@@ -100,10 +104,23 @@ public abstract class Kontener implements VanTomege {
 
   public boolean vanMarAzonosAru(Aru input) {
     for (Aru elem : kontener) {
-      if (elem.equals(input)) {
+      if (elem != null && elem.equals(input)) {
         return true;
       }
     }
     return false;
+  }
+
+  public int azonosAruIndexe(Aru input) {
+    int output = 0;
+    for (Aru elem : kontener) {
+      if (elem == null || !elem.equals(input)) {
+        output++;
+        continue;
+      } else {
+        return output;
+      }
+    }
+    throw new RuntimeException("Logikai ellentmondás: (vanMarAzonosAru = true) && (azonoAruIndexe = null)");
   }
 }

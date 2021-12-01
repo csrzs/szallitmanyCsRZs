@@ -2,7 +2,7 @@ package hu.progmatic.kozlekedesieszkoz;
 
 public class Repulo extends KozlekedesiEszkoz {
   private static final String tipus = "REPÜLŐ";
-  private static final double ellenorzesiIdo = 1.00;
+  private static final double ellenorzesiIdo = 0.5;
 
   // KONSTRUKTOROK --------------------------------------------------------------------------------
 

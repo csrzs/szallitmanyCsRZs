@@ -51,6 +51,7 @@ public class Szallitmany implements VanTomege {
 
   public String adatlap() {
     return "========== SZÁLLÍTMÁNY ADATLAPJA ==========" + "\n"
+            + "Szállítási idő: " + szallitmanyKozlekedesiEszkoz.getSzallitasiIdo(tavolsag) + " óra" + "\n"
             + "===========================================" + "\n"
             + "\n"
             + "------ KÖZLEKEDÉSI ESZKÖZ ADATLAPJA -------" + "\n"

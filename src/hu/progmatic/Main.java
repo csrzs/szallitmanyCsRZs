@@ -10,9 +10,10 @@ import hu.progmatic.szallitmany.Szallitmany;
 public class Main {
 
   public static void main(String[] args) {
-    Aru alma = new Aru("Alma", Halmazallapot.SZILARD, 2.0);
+    Aru alma = new Aru("Alma", Halmazallapot.SZILARD, 1.0);
     Aru viz = new Aru("Víz", Halmazallapot.FOLYADEK, 1.0);
-    Aru oxigen = new Aru("Oxigén", Halmazallapot.GAZ, 3.0);
+    Aru oxigen = new Aru("Oxigén", Halmazallapot.GAZ, 2.0);
+    Aru metan = new Aru("Metán", Halmazallapot.GAZ, 1.0);
 
     TeglatestKontener kontener1 = new TeglatestKontener(5, 2.0, 2.0, 3.0);
     TeglatestKontener kontener2 = new TeglatestKontener(5, 2.0, 2.0, 3.0);
@@ -23,7 +24,13 @@ public class Main {
     kontener1.hozzaAd(alma);
     kontener1.hozzaAd(viz);
     kontener1.hozzaAd(oxigen);
+    kontener1.hozzaAd(alma);
+    kontener1.hozzaAd(viz);
     kontener1.hozzaAd(oxigen);
+    kontener1.hozzaAd(metan);
+    //kontener1.hozzaAd(metan);
+    //kontener1.hozzaAd(metan);
+
     kontener2.hozzaAd(alma);
     kontener2.hozzaAd(viz);
     kontener2.hozzaAd(oxigen);
