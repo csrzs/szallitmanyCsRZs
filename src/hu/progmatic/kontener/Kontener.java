@@ -36,8 +36,7 @@ public abstract class Kontener implements VanTomege {
       throw new RuntimeException("Nincs szabad hely, vagy nincs szabad kapacitás!");
     }
     if (vanMarAzonosAru(input)) {
-      Aru inputClone = new Aru(input.getNev(), input.getHalmazallapot(), input.getMennyiseg() + kontener[azonosAruIndexe(input)].getMennyiseg());
-      kontener[azonosAruIndexe(input)] = inputClone;
+      kontener[azonosAruIndexe(input)] = new Aru(input.getNev(), input.getHalmazallapot(), input.getMennyiseg() + kontener[azonosAruIndexe(input)].getMennyiseg());
     } else {
       kontener[elsoSzabadHelyIndexe()] = input;
     }
