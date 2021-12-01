@@ -116,7 +116,6 @@ public abstract class Kontener implements VanTomege {
     for (Aru elem : kontener) {
       if (elem == null || !elem.equals(input)) {
         output++;
-        continue;
       } else {
         return output;
       }

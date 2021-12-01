@@ -10,8 +10,6 @@ public class Repulo extends KozlekedesiEszkoz {
     super(nyilvantartasiSzam, sebesseg);
   }
 
-  // GETTEREK, SETTEREK ---------------------------------------------------------------------------
-
   // OVERRIDEOK -----------------------------------------------------------------------------------
 
   @Override

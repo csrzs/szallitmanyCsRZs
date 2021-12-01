@@ -9,8 +9,6 @@ public class Vonat extends KozlekedesiEszkoz {
     super(nyilvantartasiSzam, sebesseg);
   }
 
-  // GETTEREK, SETTEREK ---------------------------------------------------------------------------
-
   // OVERRIDEOK -----------------------------------------------------------------------------------
 
   @Override

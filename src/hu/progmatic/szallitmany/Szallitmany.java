@@ -56,7 +56,7 @@ public class Szallitmany implements VanTomege {
             + "\n"
             + "------ KÖZLEKEDÉSI ESZKÖZ ADATLAPJA -------" + "\n"
             + "\n"
-            + szallitmanyKozlekedesiEszkoz.toString() + "\n"
+            + szallitmanyKozlekedesiEszkoz + "\n"
             + "\n"
             + "-------------------------------------------" + "\n"
             + "\n"
